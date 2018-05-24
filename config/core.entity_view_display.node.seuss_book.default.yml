@@ -66,10 +66,10 @@ third_party_settings:
             provider: ctools_block
             label_display: '0'
             formatter:
-              label: above
-              type: entity_reference_label
+              label: hidden
+              type: entity_reference_entity_view
               settings:
-                link: true
+                view_mode: book_cover_large
               third_party_settings: {  }
               weight: 0
               region: content

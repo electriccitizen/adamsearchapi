@@ -1,0 +1,17 @@
+uuid: 863dc44a-4108-4579-a1b6-32167aca3a5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: book_cover_large
+label: 'Book Cover large'
+effects:
+  0d749615-4d51-4fa7-b6e3-7735723e97da:
+    uuid: 0d749615-4d51-4fa7-b6e3-7735723e97da
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 440
+      height: 660
+      crop_type: focal_point

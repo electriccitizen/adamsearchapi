@@ -1,0 +1,10 @@
+uuid: 067efa77-5976-493f-a33d-9754f525e37b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.book_cover_small
+label: 'Book Cover Small'
+targetEntityType: media
+cache: true

@@ -1,0 +1,10 @@
+uuid: 30c44304-048b-4998-a1eb-f70a7558c646
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.book_cover_large
+label: 'Book Cover Large'
+targetEntityType: media
+cache: true

@@ -1,0 +1,17 @@
+uuid: fdec56d8-c0b1-4b7a-8999-f6a5fcaefd72
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: book_cover_small
+label: 'Book Cover Small'
+effects:
+  92b7b672-467c-4de1-b6b0-11fb087adea2:
+    uuid: 92b7b672-467c-4de1-b6b0-11fb087adea2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 300
+      crop_type: focal_point

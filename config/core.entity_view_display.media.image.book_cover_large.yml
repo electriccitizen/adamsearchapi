@@ -1,0 +1,35 @@
+uuid: ea409381-7f08-4a00-99fa-689b6d93a27c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.book_cover_large
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_media_image
+    - image.style.book_cover_large
+    - media_entity.bundle.image
+  module:
+    - image
+_core:
+  default_config_hash: O9UrFNy2bHzPehlxqdVsCbrKuOSw70DlYAsBwhky5hs
+id: media.image.book_cover_large
+targetEntityType: media
+bundle: image
+mode: book_cover_large
+content:
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: book_cover_large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_caption: true
+  name: true
+  thumbnail: true
+  uid: true
