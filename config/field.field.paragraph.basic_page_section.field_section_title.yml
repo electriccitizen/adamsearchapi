@@ -1,0 +1,21 @@
+uuid: 275f0e26-1215-4e4a-8eb4-b311dcea95d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title
+    - paragraphs.paragraphs_type.basic_page_section
+_core:
+  default_config_hash: ERz5oCuG-7awEoXtrsWCxN12RImNRKI4RNtnz_mCaKg
+id: paragraph.basic_page_section.field_section_title
+field_name: field_section_title
+entity_type: paragraph
+bundle: basic_page_section
+label: 'Section Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+uuid: 0cd252ac-c88d-4d71-b851-343dc1ed3dea
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zZDq687QLQzzcLPSogjOTniz4i0xUy73IaBpYWU6FTw
+id: call_to_action
+label: 'Call to Action'
+icon_uuid: 9f306de7-479d-4c8d-8832-edcd1ba9877c
+description: ''
+behavior_plugins: {  }

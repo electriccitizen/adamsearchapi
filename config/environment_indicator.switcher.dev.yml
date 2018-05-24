@@ -1,0 +1,12 @@
+uuid: 989d701f-34b3-4211-b64a-4e894fa14545
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: U6NIsK7_yu7xsd5t6nORe4GblpeZyMNt_waflSMhfk8
+machine: dev
+description: null
+name: Dev
+url: 'http://dev-newupstream.pantheonsite.io'
+fg_color: '#ffffff'
+bg_color: '#008000'

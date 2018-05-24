@@ -1,0 +1,11 @@
+uuid: 6e73e151-3258-458f-9f49-d781446915eb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6KjBPsKV5h0qM8sSpt6e0EXDMf8Oh613V536Aw4EQCM
+id: pullquote
+label: Pullquote
+icon_uuid: ff1d5535-d91c-4ca3-a60f-9cc76a45e1c5
+description: ''
+behavior_plugins: {  }

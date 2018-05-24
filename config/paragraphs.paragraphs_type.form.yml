@@ -1,0 +1,11 @@
+uuid: d4ca020d-eaf2-4d17-b582-d027593a9ea4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: m7i1gfFl_W_tdTuvP9efoV8UYj9Y7NimI7czosWaXnQ
+id: form
+label: Form
+icon_uuid: 777528c5-2885-4d0c-a13a-66c124b2d8a8
+description: ''
+behavior_plugins: {  }

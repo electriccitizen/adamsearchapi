@@ -1,0 +1,24 @@
+uuid: 9af7d3f1-38a9-4d0a-8890-e9cc11cdc810
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tags
+_core:
+  default_config_hash: 6n-H5fDAD6mBzBJTiWpX7hP61D9Wnl7H_D3f8L7r7aM
+id: taxonomy_term.tags.default
+targetEntityType: taxonomy_term
+bundle: tags
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  description: true
+  path: true

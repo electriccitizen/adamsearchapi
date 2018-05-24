@@ -1,0 +1,9 @@
+status: '1'
+pattern: '[node:field_first_name] [node:field_last_name]'
+php: 0
+escape: 0
+dependencies:
+  config:
+    - node.type.profiles
+_core:
+  default_config_hash: GnbGRPQGlf9wIeMrpL3Qza3_QBVUp_oSs4Rfaobyri0

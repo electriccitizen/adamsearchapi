@@ -1,0 +1,11 @@
+uuid: 4ad37b00-9629-47de-a85f-cfb9447c44bb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Svxv1oeyWw7lPRSJBRuYxzq2jDDeWXybIewlPzjKcJE
+id: admin_view_placer
+label: 'View Placer'
+icon_uuid: c61cd64f-3849-4ec5-9603-a85e9e8566e6
+description: ''
+behavior_plugins: {  }

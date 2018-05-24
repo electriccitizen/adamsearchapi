@@ -1,0 +1,44 @@
+uuid: 357b945e-c30b-4c80-8950-939c385fd14b
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large_800
+    - image.style.medium_500
+    - image.style.medium_500_2x
+    - image.style.small_300
+    - image.style.small_300_2x
+  theme:
+    - oc_patterns
+_core:
+  default_config_hash: 7kKS8EsQGnv69ZF1k4KO6zTfwxHHlYNTNK43GEw_eLk
+id: large_800
+label: 'Large (800)'
+image_style_mappings:
+  -
+    breakpoint_id: oc_patterns.images.desk
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: large_800
+  -
+    breakpoint_id: oc_patterns.images.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: medium_500
+  -
+    breakpoint_id: oc_patterns.images.tablet
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: medium_500_2x
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: small_300
+  -
+    breakpoint_id: oc_patterns.images.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: small_300_2x
+breakpoint_group: oc_patterns
+fallback_image_style: large_800

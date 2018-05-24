@@ -1,0 +1,30 @@
+uuid: eb88357e-60a0-46d0-970e-66673c89c1dc
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.media.banner
+    - field.field.media.document.field_media_file
+    - media_entity.bundle.document
+  module:
+    - file
+_core:
+  default_config_hash: Ug5hcPT-Rj1T9WKjLJulJGJ-7wvsl0zHR1zYN5W_SLM
+id: media.document.banner
+targetEntityType: media
+bundle: document
+mode: banner
+content:
+  field_media_file:
+    type: file_default
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,21 @@
+uuid: 527b8dbc-b335-47c5-967b-260dba8caa28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_widget_title
+    - paragraphs.paragraphs_type.text
+_core:
+  default_config_hash: MwDOwL7PEu-06T6LFokoo5B1chhzuHxpCU9Ey6S2Udw
+id: paragraph.text.field_widget_title
+field_name: field_widget_title
+entity_type: paragraph
+bundle: text
+label: 'Widget Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
