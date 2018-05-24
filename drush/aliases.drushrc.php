@@ -13,6 +13,19 @@ $aliases['<SITENAME>.local'] = array(
   ),
 );
 
+$aliases['adamsearchapi.dev'] = array(
+  'uri' => 'dev-adamsearchapi.pantheonsite.io',
+  'db-url' => 'mysql://pantheon:a1fe23b318414506bcd7411a620f0a4b@dbserver.dev.8c73083c-60de-4e9b-9494-424688b643bd.drush.in:20113/pantheon',
+  'db-allows-remote' => TRUE,
+  'remote-host' => 'appserver.dev.8c73083c-60de-4e9b-9494-424688b643bd.drush.in',
+  'remote-user' => 'dev.8c73083c-60de-4e9b-9494-424688b643bd',
+  'ssh-options' => '-p 2222 -o "AddressFamily inet"',
+  'path-aliases' => array(
+    '%files' => 'code/sites/default/files',
+    '%drush-script' => 'drush',
+  ),
+);
+
 
 $aliases['ec8-upstream.local'] = array(
   'uri' => 'ec8-upstream.local',
