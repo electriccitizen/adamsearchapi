@@ -1,4 +1,4 @@
-# Adam's Search API
+# Adam's Big Search API
 
 [![CircleCI](https://circleci.com/gh/electriccitizen/adamsearchapi.svg?style=shield)](https://circleci.com/gh/electriccitizen/adamsearchapi)
 [![Dashboard adamsearchapi](https://img.shields.io/badge/dashboard-adamsearchapi-yellow.svg)](https://dashboard.pantheon.io/sites/9ec12d94-c804-44b7-968e-166a0b49fdc0#dev/code)
