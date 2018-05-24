@@ -70,14 +70,16 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   $vm_settings = __DIR__ . "/settings.drupalvm.php";
   if (file_exists($vm_settings)) {
     include $vm_settings;
+
+    $docksal_settings = __DIR__ . "/settings.docksal.php";
+    if (file_exists($docksal_settings)) {
+      include $docksal_settings;
+    }
+
   }
 
 
 }
-$docksal_settings = __DIR__ . "/settings.docksal.php";
-  if (file_exists($docksal_settings)) {
-    include $docksal_settings;
-  }
 
 
 /**
