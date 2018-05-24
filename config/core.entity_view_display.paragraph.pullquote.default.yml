@@ -1,0 +1,44 @@
+uuid: eb2d24ba-7c98-4123-a6e8-1e76a768bbba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pullquote.field_admin_description
+    - field.field.paragraph.pullquote.field_oc_long_text
+    - field.field.paragraph.pullquote.field_oc_short_text
+    - field.field.paragraph.pullquote.field_widget_title
+    - paragraphs.paragraphs_type.pullquote
+  module:
+    - text
+_core:
+  default_config_hash: obkESmwbKXuFako3U4utT-ZSCSa_aa9-EBNjBgSxQIw
+id: paragraph.pullquote.default
+targetEntityType: paragraph
+bundle: pullquote
+mode: default
+content:
+  field_oc_long_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_oc_short_text:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_widget_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_admin_description: true

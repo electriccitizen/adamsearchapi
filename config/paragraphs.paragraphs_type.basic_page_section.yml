@@ -1,0 +1,11 @@
+uuid: ee1f3565-4de5-4fed-9c59-a6aea12f79e9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j98-kBr262k6YIq0oljkFWpPnuJ_AHNNhgcO5iPPZhM
+id: basic_page_section
+label: 'Basic Page Section'
+icon_uuid: null
+description: 'Section widgets holder for basic pages.'
+behavior_plugins: {  }

@@ -1,0 +1,11 @@
+uuid: a6b81a0a-d282-41f0-9d34-6afbaed80c2d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xk4WYUNp1k83dU-QkDedweSC_-ENJ8Xfsj9zCt1GEyc
+id: landing_page_section
+label: 'Landing Page Section'
+icon_uuid: null
+description: 'Section widgets holder for landing pages.'
+behavior_plugins: {  }

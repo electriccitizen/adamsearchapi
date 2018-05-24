@@ -1,0 +1,24 @@
+uuid: 537a3987-e92e-47cd-8d02-eab98ff0c547
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.restricted
+    - field.storage.block_content.body
+  module:
+    - text
+_core:
+  default_config_hash: gX31ltQvas055vnAq-it1B-8H84H_ViwcGVxldv47aE
+id: block_content.restricted.body
+field_name: body
+entity_type: block_content
+bundle: restricted
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

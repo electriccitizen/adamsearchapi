@@ -1,0 +1,57 @@
+uuid: fb0cee74-64c5-46a7-beec-0f5d6adcb6ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.support_book.body
+    - field.field.node.support_book.panelizer
+    - node.type.support_book
+  module:
+    - path
+    - text
+_core:
+  default_config_hash: IHNJ2MHkBUXuOEc-XEV9KCAgv5EKSam6wndOs0re9nQ
+id: node.support_book.default
+targetEntityType: node
+bundle: support_book
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  url_redirects:
+    weight: 50
+    region: content
+hidden:
+  created: true
+  panelizer: true
+  promote: true
+  sticky: true
+  uid: true

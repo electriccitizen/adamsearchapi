@@ -1,0 +1,22 @@
+uuid: 94b34c8c-17d6-4477-8008-b929cef51c8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - oc_patterns
+_core:
+  default_config_hash: 8PUPaExj33TzDw8YtjstWZ--M6tVgzsLctnXL91zo6E
+id: oc_patterns_help
+theme: oc_patterns
+region: content
+weight: -4
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

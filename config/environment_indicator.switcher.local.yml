@@ -1,0 +1,12 @@
+uuid: 5edf18f3-b26e-4574-8e4d-fb6bba60ae3d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: t9sGHtHjTky7nwVq9QVbvlXnU0meH0jhaZ-4iRtcBZE
+machine: local
+description: null
+name: Local
+url: 'http://newupstream.local/'
+fg_color: '#d0d0d0'
+bg_color: '#0d0d0d'
