@@ -1,0 +1,19 @@
+uuid: b56ce629-be0d-4827-bec6-4f3c1c1d46e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.seuss_book
+id: node.seuss_book.field_price
+field_name: field_price
+entity_type: node
+bundle: seuss_book
+label: Price
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

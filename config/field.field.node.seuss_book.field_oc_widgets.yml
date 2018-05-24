@@ -1,0 +1,85 @@
+uuid: a6d934e9-997e-47fc-977d-1a29e1e1e95d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oc_widgets
+    - node.type.seuss_book
+    - paragraphs.paragraphs_type.basic_page_section
+  module:
+    - entity_reference_revisions
+id: node.seuss_book.field_oc_widgets
+field_name: field_oc_widgets
+entity_type: node
+bundle: seuss_book
+label: Widgets
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      basic_page_section: basic_page_section
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 20
+        enabled: false
+      accordion_item:
+        weight: 21
+        enabled: false
+      admin_view_placer:
+        weight: 22
+        enabled: false
+      basic_page_section:
+        enabled: true
+        weight: 23
+      block_placer:
+        weight: 24
+        enabled: false
+      call_to_action:
+        weight: 25
+        enabled: false
+      event_by_category:
+        weight: 26
+        enabled: false
+      form:
+        weight: 27
+        enabled: false
+      horizontal_rule:
+        weight: 28
+        enabled: false
+      image:
+        weight: 29
+        enabled: false
+      landing_page_section:
+        weight: 30
+        enabled: false
+      lightbox_gallery:
+        weight: 31
+        enabled: false
+      links_files:
+        weight: 32
+        enabled: false
+      map:
+        weight: 33
+        enabled: false
+      news_by_category:
+        weight: 34
+        enabled: false
+      pullquote:
+        weight: 35
+        enabled: false
+      slideshow:
+        weight: 36
+        enabled: false
+      text:
+        weight: 37
+        enabled: false
+      video:
+        weight: 38
+        enabled: false
+field_type: entity_reference_revisions

@@ -4,6 +4,6 @@ scheme_whitelist:
   - files
   - internal
 protocol_style: full
-local_paths: "http://newupstream.docksal/\r\nhttp://dev-newupstream.pantheonsite.io/"
+local_paths: "http://adamsearchapi.docksal/\r\nhttp://dev-adamsearchapi.pantheonsite.io/"
 _core:
   default_config_hash: A2EdM5QyvyuJY3XvUh7EgWef5aBQBMHf9DQ3y4lV-Sg

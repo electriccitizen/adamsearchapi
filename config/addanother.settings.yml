@@ -12,6 +12,7 @@ button:
   blog: false
   landing_page: false
   gather_content_node: false
+  seuss_book: false
 message:
   page: false
   event: false
@@ -22,6 +23,7 @@ message:
   blog: false
   landing_page: false
   gather_content_node: true
+  seuss_book: true
 tab:
   page: true
   event: true
@@ -32,6 +34,7 @@ tab:
   blog: true
   landing_page: true
   gather_content_node: false
+  seuss_book: false
 tab_edit:
   page: false
   event: false
@@ -42,5 +45,6 @@ tab_edit:
   blog: false
   landing_page: false
   gather_content_node: false
+  seuss_book: false
 _core:
   default_config_hash: 9Z2O3Oc3S2GZbgTY1Ut2nNhRnb0HCM3WZW-4x3eo-i0

@@ -1,0 +1,28 @@
+uuid: b3dbc64e-ad15-441c-9e28-e8ca55519982
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_book_author
+    - node.type.profiles
+    - node.type.seuss_book
+id: node.seuss_book.field_book_author
+field_name: field_book_author
+entity_type: node
+bundle: seuss_book
+label: 'Book Author'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      profiles: profiles
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

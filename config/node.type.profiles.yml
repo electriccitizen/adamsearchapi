@@ -10,9 +10,9 @@ third_party_settings:
     parent: ''
 _core:
   default_config_hash: mWwihqswUrSDfOjloyrpvFefIFKeR7Ubak6YFwmev4E
-name: Profiles
+name: Author
 type: profiles
-description: 'Add profile nodes.'
+description: 'Add author nodes.'
 help: ''
 new_revision: true
 preview_mode: 1

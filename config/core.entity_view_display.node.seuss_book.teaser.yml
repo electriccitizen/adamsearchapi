@@ -1,31 +1,29 @@
-uuid: fd11dceb-3c5c-480b-bba5-9786b6e8e598
+uuid: c047f697-3df3-4b9a-9857-aeb8d93feccb
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.book.body
-    - node.type.book
+    - field.field.node.seuss_book.body
+    - node.type.seuss_book
   module:
     - text
     - user
-_core:
-  default_config_hash: krIbNOdqw4vMF3Ty8qAW6AxgxmdBig5XuQRBW8-HYCU
-id: node.book.teaser
+id: node.seuss_book.teaser
 targetEntityType: node
-bundle: book
+bundle: seuss_book
 mode: teaser
 content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 100
-    region: content
+    weight: 101
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   links:
-    weight: 101
+    weight: 100
     region: content
 hidden:
   addtoany: true

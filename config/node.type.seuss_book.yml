@@ -1,0 +1,17 @@
+uuid: 5116c95b-776c-4b77-8128-4b469161702b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Seuss Book'
+type: seuss_book
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false
