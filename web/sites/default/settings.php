@@ -74,6 +74,11 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 
 }
+$docksal_settings = __DIR__ . "/settings.docksal.php";
+  if (file_exists($docksal_settings)) {
+    include $docksal_settings;
+  }
+
 
 /**
  * Always install the 'standard' profile to stop the installer from
