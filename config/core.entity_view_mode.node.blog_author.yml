@@ -1,0 +1,12 @@
+uuid: cd73bbd9-b96e-456b-8f4b-ce4ca121b6c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: zwCmfjiMw1AykOfA6dLY3iADNEiHO7wTizOga9iqjB0
+id: node.blog_author
+label: 'Blog Author'
+targetEntityType: node
+cache: true

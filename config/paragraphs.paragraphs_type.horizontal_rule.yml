@@ -1,0 +1,11 @@
+uuid: 1709fd3a-5c7d-47f5-ad0f-3f4ed006c75d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: oO8Fb5EghXuZGvyU9nNgz8kVHTLsdXyWdymrI6SvYs0
+id: horizontal_rule
+label: 'Horizontal Rule'
+icon_uuid: e17677f9-e84e-46a2-a0d2-743304926ec1
+description: ''
+behavior_plugins: {  }

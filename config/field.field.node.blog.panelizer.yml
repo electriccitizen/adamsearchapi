@@ -1,0 +1,23 @@
+uuid: 122120ad-b61a-4175-86a1-3d298be5239d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.panelizer
+    - node.type.blog
+  module:
+    - panelizer
+_core:
+  default_config_hash: YDzBKtr3S2QOOpYUVzsaF4Go_r51SPQ7JPJeVDwfEo0
+id: node.blog.panelizer
+field_name: panelizer
+entity_type: node
+bundle: blog
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer

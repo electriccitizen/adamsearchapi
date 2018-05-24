@@ -1,0 +1,19 @@
+uuid: bdc168fe-33f4-4d5e-b3b3-4ef4ed39a42a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horizontal_rule.field_hr_default
+    - paragraphs.paragraphs_type.horizontal_rule
+_core:
+  default_config_hash: qAlEvCDB4WGaMXwWrjDd0PeAeq3Z9ssKHEYA6ndjEfw
+id: paragraph.horizontal_rule.default
+targetEntityType: paragraph
+bundle: horizontal_rule
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_hr_default: true
+  status: true
+  uid: true

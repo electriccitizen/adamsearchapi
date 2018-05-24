@@ -1,0 +1,23 @@
+uuid: 096b8e67-e0cc-4e55-b663-9d54c71ac2d4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - oc_patterns
+_core:
+  default_config_hash: uQo6gCf2s6IfPLoUpKlk2gZoeZA4lWVk9aijLVK0xj4
+id: prefooterone
+theme: oc_patterns
+region: prefooter
+weight: 0
+provider: null
+plugin: 'block_content:aa710d13-ef85-4fa3-aa42-4e5c8525766e'
+settings:
+  id: 'block_content:aa710d13-ef85-4fa3-aa42-4e5c8525766e'
+  label: 'Prefooter One'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
