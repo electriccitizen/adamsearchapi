@@ -1,9 +1,9 @@
-name: adamsearchapi
+name: 'Seussbook Press'
 mail: tim@electriccitizen.com
 slogan: 'The bird'
 page:
   403: ''
-  404: /node/2
+  404: ''
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
