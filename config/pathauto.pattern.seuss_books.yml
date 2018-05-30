@@ -1,0 +1,22 @@
+uuid: 6878dae0-e416-4b9b-b613-ef9b89fa021d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: seuss_books
+label: 'Seuss Books'
+type: 'canonical_entities:node'
+pattern: 'books/[node:title]'
+selection_criteria:
+  9b696c99-938e-4553-8057-472204a6ca34:
+    id: node_type
+    bundles:
+      seuss_book: seuss_book
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 9b696c99-938e-4553-8057-472204a6ca34
+selection_logic: and
+weight: -5
+relationships: {  }

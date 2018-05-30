@@ -1,0 +1,21 @@
+uuid: 2e1f1fd3-2e17-49df-88ae-f6f5d57f5809
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.panelizer
+    - node.type.seuss_book
+  module:
+    - panelizer
+id: node.seuss_book.panelizer
+field_name: panelizer
+entity_type: node
+bundle: seuss_book
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer

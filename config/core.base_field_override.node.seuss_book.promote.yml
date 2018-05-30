@@ -1,15 +1,13 @@
-uuid: e163b01f-7e63-4ad8-83b0-218a2720910a
+uuid: b65ed32d-0e34-4b5e-a84e-db77886de8b0
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.book
-_core:
-  default_config_hash: rYbAZX1eKDo7CVRnBnpYgdmk8HQo5IcKhzePCx9LCZY
-id: node.book.promote
+    - node.type.seuss_book
+id: node.seuss_book.promote
 field_name: promote
 entity_type: node
-bundle: book
+bundle: seuss_book
 label: 'Promoted to front page'
 description: ''
 required: false
