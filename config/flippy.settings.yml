@@ -119,3 +119,20 @@ flippy_sort_news: nid
 flippy_order_news: ASC
 _core:
   default_config_hash: ZIfzDOKW7ZAjKM3HAtOK08DhQMTQZDKU5qTvic8_t3Y
+flippy_seuss_book: 0
+flippy_head_seuss_book: 0
+flippy_show_empty_seuss_book: 0
+flippy_prev_label_seuss_book: ''
+flippy_next_label_seuss_book: ''
+flippy_first_last_seuss_book: 0
+flippy_first_label_seuss_book: ''
+flippy_last_label_seuss_book: ''
+flippy_loop_seuss_book: 0
+flippy_random_seuss_book: 0
+flippy_random_label_seuss_book: ''
+flippy_truncate_seuss_book: ''
+flippy_ellipse_seuss_book: ''
+flippy_press_swipe_seuss_book: null
+flippy_custom_sorting_seuss_book: 0
+flippy_sort_seuss_book: nid
+flippy_order_seuss_book: ASC
