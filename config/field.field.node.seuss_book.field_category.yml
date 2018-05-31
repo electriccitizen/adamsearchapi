@@ -10,7 +10,7 @@ id: node.seuss_book.field_category
 field_name: field_category
 entity_type: node
 bundle: seuss_book
-label: Category
+label: Categories
 description: ''
 required: false
 translatable: true

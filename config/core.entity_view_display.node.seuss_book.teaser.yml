@@ -27,3 +27,9 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_book_author: true
+  field_category: true
+  field_cover_image: true
+  field_oc_widgets: true
+  field_price: true
+  panelizer: true

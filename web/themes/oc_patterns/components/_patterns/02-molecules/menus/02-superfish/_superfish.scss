@@ -30,6 +30,7 @@
 	----------------- */
 .sf-main li{
 	a{
+		font-family: $header;
 		color: $link;
 		text-align: left;
 		&:hover,&:focus{

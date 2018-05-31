@@ -2,7 +2,7 @@
    SITE FOOTER
 =============== */
 footer {
-
+	border-top: 10px solid $pink;
 	//need a min-height so fixed footer script can pickup offset
 	@include tab{
 		min-height: 1px;
@@ -25,16 +25,9 @@ footer {
 			position: relative;
 			max-width: $maxWidth;
 			@include auto;
-			@include safeFlex(row,wrap,null,null);
+			@include safeFlex(row,wrap,center,null);
 		}
 
-		//add a top border when not fixed
-		&:not(.isFixed){
-			& > div{
-				border-top: 1px solid $offWhite;
-				padding-top: 1em;
-			}
-		}
 
 		//styling when fixed
 		/*

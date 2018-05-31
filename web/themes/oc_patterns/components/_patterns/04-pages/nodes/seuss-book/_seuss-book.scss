@@ -1,0 +1,73 @@
+/* ============
+   SEUSS BOOK PAGE
+================ */
+.node--type-seuss_book{
+	@include spacer(4);
+	@include clearFix;
+
+	.block-entity-fieldnodefield-cover-image{
+		@include deskMenu{
+			float: right;
+			width: 480px;
+			padding-left: 40px;
+		}
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.block-region-main{
+		.block:not(.block-entity-fieldnodefield-cover-image){
+			@include deskMenu{
+				@include calc(max-width, "100% - 480px");
+			}
+		}
+	}
+	
+	//title
+	h1{
+		margin-bottom: 10px;
+	}
+
+	.field-book-author{
+		font-size: 22px;
+		font-family: $header;
+		@include spacer(2);
+	}
+
+	.field.body{
+		@include spacer(2);
+	}
+
+	.block-entity-fieldnodefield-price{
+		border-top: 6px solid $green;
+		padding-top: 1em;
+		font-family: $header;
+		.field{
+			float: left;
+			width: 50%;
+			&:first-child{
+				padding-right: 40px;
+			}
+			.label{
+				font-weight: bold;
+				font-size: 18px;
+				+ div{
+					display: inline-block;
+				}
+			}
+		}
+	}
+	.block-entity-fieldnodefield-category{
+		font-family: $header;
+		.label{
+			font-weight: bold;
+			font-size: 18px;
+			+ div{
+				display: inline-block;
+			}
+		}
+	}
+
+}//end basic page

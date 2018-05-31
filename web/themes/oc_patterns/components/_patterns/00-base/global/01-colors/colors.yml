@@ -43,12 +43,16 @@ items:
     value: '#fff369'
   - name: $green
     value: '#0f7d7a'
+  - name: $pink
+    value: '#da56a2'
+  - name: $orange
+    value: '#feb244'
   - name: $link
     value: '#cd2616'
   - name: $activeLink
     value: '#000000'
   - name: $hoverLink
-    value: '#da56a2'
+    value: '#007b97'
   - name: $codeString
     value: '#017aa2'
 meta:

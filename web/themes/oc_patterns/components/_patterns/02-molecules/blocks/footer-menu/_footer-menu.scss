@@ -7,7 +7,6 @@
 		display: none;
 	}
 	width: 100%;
-	@include safeFlexOrder(1);
 	margin-bottom: 1.5em;
 	text-align: center;
 	//change the footer block order at tab and align right
@@ -17,11 +16,13 @@
 	}
 	ul:not(.contextual-links){
 		@include listReset;
-		@include safeFlex(row,wrap,null,null);
+		@include safeFlex(row,wrap,center,null);
 		li{
 			a{
 				font-size: 16px;
 				color: $white;
+				display: block;
+				font-family: $header;
 				&:hover,&:focus{
 					color: $yellow;
 					@include transAll(.3s);
@@ -31,10 +32,11 @@
 				padding-left: 6px;
 			}
 			&:not(:last-child){
+				position: relative;
+				padding-right: 10px;
+				padding-left: 8px;
 				&:after{
-					content: '•';
-					padding-left: 8px;
-					color: $transWhite;
+					@include vertRule(right,60%,$white);
 				}
 			}
 		}

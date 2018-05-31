@@ -4,6 +4,10 @@
 
 .block--system-branding{
 	a{
+		display: block;
+		margin-bottom: -6px;
+		position: relative;
+		top: -6px;
 		img{
 			display: none;
 			width: 100%;

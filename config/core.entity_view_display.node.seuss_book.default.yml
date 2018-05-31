@@ -46,9 +46,9 @@ third_party_settings:
             id: 'entity_field:node:field_category'
             label: Category
             provider: ctools_block
-            label_display: visible
+            label_display: '0'
             formatter:
-              label: hidden
+              label: inline
               type: entity_reference_label
               settings:
                 link: false
@@ -74,7 +74,7 @@ third_party_settings:
               weight: 0
               region: content
             region: main
-            weight: -1
+            weight: -3
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: cdc17013-8ee9-4c89-9001-598a0fe54f77
@@ -109,7 +109,7 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
             region: main
-            weight: -3
+            weight: -2
             uuid: 79723b73-2d53-432c-9e6c-ae9ca8524f23
             context_mapping:
               entity: '@panelizer.entity_context:entity'
@@ -119,7 +119,7 @@ third_party_settings:
             provider: ctools_block
             label_display: '0'
             formatter:
-              label: hidden
+              label: inline
               type: string
               settings:
                 link_to_entity: false
@@ -139,11 +139,11 @@ third_party_settings:
               label: hidden
               type: entity_reference_label
               settings:
-                link: true
+                link: false
               third_party_settings: {  }
               weight: 0
             region: main
-            weight: -2
+            weight: -1
             uuid: 84878874-9539-4dbb-9a6a-3df45b858b3c
             context_mapping:
               entity: '@panelizer.entity_context:entity'
