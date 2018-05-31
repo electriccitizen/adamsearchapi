@@ -4,7 +4,7 @@ items:
   - name: $lightGrey
     value: '#ccc'
   - name: $grey
-    value: '#ddd'
+    value: '#ababab'
   - name: $darkGrey
     value: '#222222'
   - name: $offWhite
@@ -34,13 +34,21 @@ items:
   - name: $siteBack
     value: '#ffffff'
   - name: $borderRule
-    value: '#222222'
+    value: '#6b4b22'
+  - name: $red
+    value: '#cd2616'
+  - name: $blue
+    value: '#007b97'
+  - name: $yellow
+    value: '#fff369'
+  - name: $green
+    value: '#0f7d7a'
   - name: $link
-    value: '#d52d00'
+    value: '#cd2616'
   - name: $activeLink
     value: '#000000'
   - name: $hoverLink
-    value: '#676767'
+    value: '#da56a2'
   - name: $codeString
     value: '#017aa2'
 meta:

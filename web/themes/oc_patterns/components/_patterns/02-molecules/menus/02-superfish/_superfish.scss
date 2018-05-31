@@ -48,7 +48,7 @@
 
 /* DESK FISH
 ---------------- */
-.sf-menu.sf-horizontal.sf-main{
+.sf-menu.sf-horizontal{
 
 	%deskdrop{
 		&.menuparent{
@@ -66,8 +66,14 @@
 
 
 	/* ====  sf main links ==== */
-	&.sf-menu{
+	&.sf-main{
 		@include safeFlex(row,wrap,null,null);
+		.block-superfishmain.right &{
+			@include safeFlex(row,wrap,end,null);
+		}
+		.block-superfishmain.center &{
+			@include safeFlex(row,wrap,center,null);
+		}
 		& > li{
 			&:not(.sfHover){
 				& > ul{

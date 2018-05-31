@@ -3,9 +3,13 @@
 =================== */
 
 .layout-container > header {
-	background: $offWhite;
+	background: $yellow;
+	@include transition(margin-top, .2s, linear);
+	&.slideDown{
+		margin-top: 85px;	
+	}
 	& > div{
-		padding: 10px 20px;
+		padding: 40px 20px 0;
 		@include paddedContent;
 		@include auto;
 		position: relative;
@@ -24,7 +28,7 @@
 
 	//set width at desktop
 	@include deskMenu{
-		width: 300px;
+		width: 360px;
 	}
 
 	a{
@@ -48,7 +52,7 @@
 
 	//set width at desktop
 	@include deskMenu{
-		@include calc(width, "100% - 300px");
+		@include calc(width, "100% - 360px");
 	}
 
 	//search toggler
@@ -71,21 +75,19 @@
 
 	//desktop position
 	@include deskMenu{
-		width: 100%;
+		@include calc(width, "100% - 360px");
 		margin: 10px 0 0 -10px;
 		vertical-align: middle;
 		text-align: left;
 
 		//when menu alignment right variable is used
 		&.right{
-			text-align: right;
 			margin: 10px -15px 0 0;
 		}
 
 		//when menu alignment center variable is used
 		&.center{
 			width: 100%;
-			text-align: center;
 			position: static;
 			margin: 0;
 		}

@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: 'Seuss Book'
 type: seuss_book
-description: ''
+description: 'Add Seuss Book'
 help: ''
 new_revision: true
 preview_mode: 0

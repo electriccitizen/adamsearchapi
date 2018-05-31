@@ -33,33 +33,21 @@
 
 	//center search box on mobile and set height to 0 so can open under header when toggled
 	#search-block-form,#views-exposed-form-site-search-search-results {
-		height: 0;
-		overflow: hidden;
+		height: 85px;
+		padding: 15px 20px;
 		text-align: center;
 		z-index: 5;
 		position: absolute;
-		top: 100%;
+		top: -85px;
 		left: 50%;
 		@include translateX(-50%);
 		width: 80%;
-		max-width: 500px;
-		@include backfaceVisibility(hidden);
-		&.slideDown{
-			height: 50px;
-			@include transition(height, .2s, linear);
-
+		max-width: 1000px;
+		&:after{
+			@include fullBack(lighten($yellow, 15%));
 		}
 		& > div{
 			display: inline-block;
-		}
-		//move search box back to upper right at desktop
-		@include deskMenu{
-			top: -5px;
-			left: auto;
-			//from 01-mixins.scss
-			@include translateX(0);
-			right: 55px;
-			max-width: 320px;
 		}
 
 		//search box input
@@ -67,9 +55,6 @@
 			padding: 10px 0;
 			width: 100%;
 			margin-bottom: 0;
-			@include deskMenu{
-				width: 320px;
-			}
 			input{
 				width: 100%;
 				@include deskMenu{
@@ -89,8 +74,8 @@
 		//search submit button
 		.form-submit{
 			position: absolute;
-			right: 8px;
-			top: 18px;
+			right: 30px;
+			top: 33px;
 			color: $white;
 			text-indent: 9000px;
 			border: none;

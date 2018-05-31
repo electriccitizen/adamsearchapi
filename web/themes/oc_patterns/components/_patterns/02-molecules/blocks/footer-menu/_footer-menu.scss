@@ -21,8 +21,9 @@
 		li{
 			a{
 				font-size: 16px;
+				color: $white;
 				&:hover,&:focus{
-					color: $transWhite;
+					color: $yellow;
 					@include transAll(.3s);
 				}
 			}

@@ -38,7 +38,7 @@ $h6Sm: 18px;
 
 @mixin heading1{
 	@include headerGlobals;
-	font-family: $display-header;
+	font-family: $displayHeader;
 	font-size: $h1Sm;
 	@include tab{
 		font-size: $h1Mid;
