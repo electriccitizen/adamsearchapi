@@ -55,8 +55,10 @@
 	max-width: 1000px;
 	@include auto;
 	@extend .seuss-books.homepage-featured;
+	@include safeFlex(row,wrap,null,null);
 
 	.views-exposed-form{
+		width: 100%;
 		position: relative;
 		padding-top: 2em;
 		padding-bottom: 1em;
@@ -81,10 +83,20 @@
 	}//end views exposed form
 
 	.view-content{
+		width: 100%;
 		@include smallTab{
 			@include bleed(40px);
 		}
 	}
+
+	.view-empty{
+		width: 100%;
+		max-width: $maxWidthText;
+		@include auto;
+		margin-top: 2em;
+		padding-bottom: 2em;
+	}
+
 	.views-row{
 		@include smallTab{
 			padding-left: 20px;
@@ -93,6 +105,13 @@
 		@include tab{
 			width: 25%;
 		}
+	}
+
+	.view-footer{
+		@include pagerResults;
+	}
+	.bottom-pager{
+		@include pagerNumbers;
 	}
 }//end books landing
 

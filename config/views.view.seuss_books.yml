@@ -500,6 +500,7 @@ display:
         fields: false
         footer: false
         exposed_form: false
+        empty: false
       pager:
         type: full
         options:
@@ -1026,7 +1027,17 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-      footer: {  }
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: "<div>\n<span>Results:</span> Page @current_page-@page_count\n</div>"
+          plugin_id: result
       exposed_form:
         type: basic
         options:
@@ -1037,6 +1048,20 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "Oh alas you poor fool! You are lost in the Great Jungle of Nool!\nDo not be afraid and do not drool. Hope on your mule and try <a href=\"/look-books\">different search rules</a>."
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

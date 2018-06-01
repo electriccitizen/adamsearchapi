@@ -32,9 +32,12 @@ SECTION LAYOUTS
 	position: relative;
 
 	&:not(.background){
-		padding-top: 3em;
-		padding-bottom: 3em;
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
 		& + .section:not(.background){
+			padding-top: 0;
+		}
+		&:first-child{
 			padding-top: 0;
 		}
 	}

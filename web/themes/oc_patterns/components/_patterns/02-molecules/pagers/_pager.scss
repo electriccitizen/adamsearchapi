@@ -32,7 +32,7 @@ $pager-line: 24px;
 .js-pager__items{
 	@include listReset;
 	text-align: center;
-	@include safeFlex(row,wrap,null,null);
+	@include safeFlex(row,wrap,center,null);
 	li{
 		*{
 			line-height: $pager-line;

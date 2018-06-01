@@ -385,8 +385,8 @@ $textW: $maxWidthText;
 
 ///mixin - edgeToEdge
 @mixin edgeReset {
-	margin-left:-20px;
-	margin-right:-20px;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 ///mixin - clearfix
@@ -555,5 +555,58 @@ $textW: $maxWidthText;
 }
 
 
+/* SITE CUSTOM MIXINS
+---------------- */
+@mixin pagerNumbers{
+	@include safeFlexSize(0,0,100%);
+	text-align: center;
+	@include tab{
+		border-top: 2px solid $green;
+		@include safeFlexSize(1,1,auto);
+	}
+	.pager{
+		position: relative;
+		padding: 6px 0 26px;
+		.pager__item a{
+			font-family: $header;
+			font-weight: $heavy;
+		}
+		.pager__item:not(.pager__item--first):not(.pager__item--previous):not(.pager__item--next):not(.pager__item--last) a{
+			font-family: $header;
+			font-weight: $heavy;
+		}
+		@include tab{
+			padding: 20px 0 18px;
+			.js-pager__items{
+				@include safeFlex(row,wrap,end,start);
+			}
+		}
+	}
+}
 
+@mixin pagerResults{
+	border-top: 2px solid $green;
+	width: 100%;
+	@include spacer(1);
+
+	div{
+		position: relative;
+		padding: 20px 0;
+		text-align: center;
+		font-size: 18px;
+		font-family: $header;
+		color: $darkGrey;
+		span{
+			text-transform: uppercase;
+		}
+	}
+	@include tab{
+		width: 200px;
+		@include spacer(0);
+		div{
+			padding: 20px 0 18px;
+			text-align: left;
+		}
+	}
+}
 
