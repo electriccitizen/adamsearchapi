@@ -38,6 +38,10 @@
 	]
 %}
 <div{{ attributes.addClass(classes) }}>
+	{{ title_prefix }}
+	{{ title }}
+	{{ title_suffix }}
+
 	{# <h1>Site Search</h1> #}
 	
 	{# {{ drupal_block('exposedformsite_searchsearch_results', false) }} #}
@@ -47,6 +51,8 @@
 			{{ header }}
 		</div>
 	{% endif %}
+
+	{{ exposed }}
 
 	{{ attachment_before }}
 	{% if rows %}

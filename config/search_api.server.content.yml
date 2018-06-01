@@ -1,0 +1,17 @@
+uuid: b47ac17d-96f3-477f-984c-a7a1b42d76bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: content
+name: Content
+description: 'Database server for content indexes.'
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  partial_matches: false
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

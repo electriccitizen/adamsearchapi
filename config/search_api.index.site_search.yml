@@ -1,0 +1,193 @@
+uuid: 28f09f8a-e8b9-4f39-a67e-6b6bf682f073
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_book_author
+    - field.storage.node.field_oc_widgets
+    - field.storage.paragraph.field_accordion_item
+    - field.storage.paragraph.field_accordion_header
+    - field.storage.node.body
+    - field.storage.paragraph.field_oc_long_text
+    - field.storage.paragraph.field_widget_title
+    - field.storage.node.field_category
+    - search_api.server.content
+  module:
+    - node
+    - paragraphs
+    - taxonomy
+    - search_api
+id: site_search
+name: 'Site Search'
+description: 'Index for sitewide search.'
+read_only: false
+field_settings:
+  title:
+    label: 'Book Author » Content » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_book_author:entity:title'
+    type: text
+    boost: !!float 5
+    dependencies:
+      config:
+        - field.storage.node.field_book_author
+      module:
+        - node
+  title_1:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 21
+  field_accordion_header_1:
+    label: 'Widgets » Paragraph » Accordion » Paragraph » Accordion Header'
+    datasource_id: 'entity:node'
+    property_path: 'field_oc_widgets:entity:field_accordion_item:entity:field_accordion_header'
+    type: text
+    boost: !!float 3
+    dependencies:
+      config:
+        - field.storage.node.field_oc_widgets
+        - field.storage.paragraph.field_accordion_item
+        - field.storage.paragraph.field_accordion_header
+      module:
+        - paragraphs
+        - paragraphs
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  field_oc_long_text:
+    label: 'Widgets » Paragraph » Accordion » Paragraph » Accordion Content'
+    datasource_id: 'entity:node'
+    property_path: 'field_oc_widgets:entity:field_accordion_item:entity:field_oc_long_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_oc_widgets
+        - field.storage.paragraph.field_accordion_item
+        - field.storage.paragraph.field_oc_long_text
+      module:
+        - paragraphs
+        - paragraphs
+  field_widget_title:
+    label: 'Widgets » Paragraph » Widget Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_oc_widgets:entity:field_widget_title'
+    type: text
+    boost: !!float 8
+    dependencies:
+      config:
+        - field.storage.node.field_oc_widgets
+        - field.storage.paragraph.field_widget_title
+      module:
+        - paragraphs
+  name:
+    label: 'Categories » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_category:entity:name'
+    type: text
+    boost: !!float 5
+    dependencies:
+      config:
+        - field.storage.node.field_category
+      module:
+        - taxonomy
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - blog
+        - landing_page
+        - page
+        - seuss_book
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  stemmer:
+    all_fields: true
+    fields:
+      - title
+      - title_1
+      - field_accordion_header_1
+      - body
+      - field_oc_long_text
+      - field_widget_title
+      - name
+    exceptions:
+      texan: texa
+      mexican: mexic
+    weights:
+      preprocess_index: 0
+      preprocess_query: 0
+  rendered_item: {  }
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  tokenizer:
+    all_fields: false
+    fields:
+      - field_accordion_header_1
+      - body
+      - field_oc_long_text
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+  ignorecase:
+    all_fields: false
+    fields:
+      - title
+      - title_1
+      - field_accordion_header_1
+      - body
+      - field_oc_long_text
+      - field_widget_title
+      - name
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  type_boost:
+    boosts:
+      'entity:node':
+        datasource_boost: !!float 1
+        bundle_boosts:
+          blog: !!float 0
+          landing_page: !!float 0
+          page: !!float 0
+          seuss_book: !!float 3
+    weights:
+      preprocess_index: 0
+  html_filter:
+    all_fields: false
+    fields:
+      - body
+      - field_oc_long_text
+    title: true
+    alt: true
+    tags:
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      b: 2
+      em: 1
+      u: 1
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: content
