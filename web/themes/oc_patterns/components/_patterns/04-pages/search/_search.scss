@@ -77,14 +77,18 @@
 		.site-search{
 			@include safeFlex(row,wrap,null,null);
 			h1{
+				@include spacer(0);
 				@include tab{
 					color: $black;
 				}
 			}
+			.search-leadin{
+				width: 100%;
+				@include spacer(1.5);
+			}
 			.block-search-form-block{
 				width: 100%;
 				text-align: left;
-				margin-bottom: 2em;
 				display: block;
 				width: 100%;
 				.t-search{

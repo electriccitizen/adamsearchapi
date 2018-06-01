@@ -38,21 +38,20 @@
 	]
 %}
 <div{{ attributes.addClass(classes) }}>
-	{{ title_prefix }}
-	{{ title }}
-	{{ title_suffix }}
 
-	{# <h1>Site Search</h1> #}
+	<h1>Site Search</h1>
+
+	<div class="search-leadin">
+		<p><strong>Oh the places you'll go...</strong></p>
+	</div>
 	
-	{# {{ drupal_block('exposedformsite_searchsearch_results', false) }} #}
+	{{ drupal_block('exposedformsite_searchsite_search', false) }}
 
 	{% if header %}
 		<div class="view-header">
 			{{ header }}
 		</div>
 	{% endif %}
-
-	{{ exposed }}
 
 	{{ attachment_before }}
 	{% if rows %}
