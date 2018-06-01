@@ -413,6 +413,7 @@ display:
       display_extenders: {  }
       path: site-search
       display_description: ''
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
