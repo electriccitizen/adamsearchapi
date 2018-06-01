@@ -5,6 +5,7 @@
 .layout-container > header {
 	background: $yellow;
 	@include transition(margin-top, .2s, linear);
+	border-top: 10px solid $green;
 	&.slideDown{
 		margin-top: 85px;	
 	}
