@@ -95,6 +95,29 @@
 }//end search page
 
 
+/* CORE SEARCH PAGE
+---------------- */
+.path-search{
+
+	#search-form{
+		@include spacer(2);
+	}
+
+	#edit-basic.container-inline{
+		@include spacer(.5);
+	}
+	.form-search{
+		@include textInput;
+		max-width: 300px;
+		margin-right: 2em;
+	}
+
+	.pager{
+		border-top: 2px solid $green;
+		padding-top: 1em;
+	}
+}//end core search
+
 
 
 /* PATTERN LAB ONLY
