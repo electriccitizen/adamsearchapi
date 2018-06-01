@@ -1,0 +1,115 @@
+uuid: f7dee150-7958-4303-893d-ddc3fe3fa082
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_book_author
+    - field.storage.node.body
+    - field.storage.node.field_category
+    - search_api.server.content
+  module:
+    - node
+    - search_api
+id: seuss_books
+name: 'Seuss Books'
+description: 'Index specifically for Seuss Books.'
+read_only: false
+field_settings:
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 5
+  title_1:
+    label: 'Book Author » Content » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_book_author:entity:title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_book_author
+      module:
+        - node
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  field_category:
+    label: Categories
+    datasource_id: 'entity:node'
+    property_path: field_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_category
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - seuss_book
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  stemmer:
+    all_fields: false
+    fields:
+      - body
+    exceptions:
+      texan: texa
+      mexican: mexic
+    weights:
+      preprocess_index: 0
+      preprocess_query: 0
+  rendered_item: {  }
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  tokenizer:
+    all_fields: false
+    fields:
+      - body
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+  ignorecase:
+    all_fields: true
+    fields:
+      - title
+      - title_1
+      - body
+      - field_category
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  html_filter:
+    all_fields: false
+    fields:
+      - body
+    title: true
+    alt: true
+    tags:
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      b: 2
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: content
