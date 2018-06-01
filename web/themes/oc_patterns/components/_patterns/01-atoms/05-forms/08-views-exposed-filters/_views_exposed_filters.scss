@@ -6,6 +6,11 @@
 	.form-item{
 		max-width: 250px;
 		display: inline-block;
+		vertical-align: top;
+		input{
+			font-family: $bodyfont;
+			font-size: 17px;
+		}
 		&:nth-last-child(n+3){
 			margin-right: 1em;
 		}

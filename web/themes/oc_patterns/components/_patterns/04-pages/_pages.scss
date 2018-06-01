@@ -15,3 +15,30 @@ html > body:not(.is-front):not(.path-node):not(.node-type-page){
 	}
 
 }//end unpanelized pages
+
+
+/* FRONT PAGE
+-------------- */
+.is-front{
+	.block-region-main{
+		@include safeFlex(row,wrap,justify,null);
+		max-width: 1000px;
+		@include auto;
+		.block-views-blockseuss-books-homepage-featured{
+			width: 100%;
+			@include tab{
+				width: 35%;
+			}
+		}
+		.block-entity-fieldnodebody{
+			width: 100%;
+			@include spacer(3);
+			@include tab{
+				width: 65%;
+				font-size: 24px;
+				padding-right: 40px;
+			}
+		}
+	}//end block region main
+
+}//end is front

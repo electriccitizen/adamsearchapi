@@ -84,12 +84,15 @@ $h6Sm: 18px;
 
 @mixin blockTitle{
 	@include headerGlobals;
-	font-size: 20px;
+	font-size: 22px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: center;
 	max-width: $maxWidth;
 	@include auto;
+	padding-bottom: .5em;
+	border-bottom: 2px solid $green;
+	@include spacer(1);
 }
 
 

@@ -91,12 +91,11 @@
 				//@include menushim;
 			}
 			&.active-trail > a{
-				color: $white;
+				color: $link;
 			}
 			&:hover,&:focus{
 				background: $white;
 				& > a{
-					color: $black;
 					&:after{
 						///menu shim background  
 						background: $white;

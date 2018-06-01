@@ -7,7 +7,7 @@
 
 ///mixin - button
 @mixin button{
-	background-color: $black;
+	background-color: $link;
 	border:none;
 	color: $white;
 	line-height: 1.4;
@@ -24,8 +24,10 @@
 		color: $white;
 	}
 	&:hover,&:focus {
+		color: $white;
 		background-color: $hoverLink;
-		@include transAll(.3s);
+		text-decoration: none;
+		@include transAll(.2s);
 	}
 }
 
@@ -39,7 +41,8 @@
 		background: $outlineColor;
 		color: $black;
 		border-color: $outlineColor;
-		@include transAll(.3s);
+		text-decoration: none;
+		@include transAll(.2s);
 	}
 }
 

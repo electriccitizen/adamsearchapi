@@ -1,0 +1,99 @@
+/* ==================
+    SEUSS BOOK VIEWS
+==================== */
+
+/* HOME PAGE FEATURED
+------------------ */
+
+.seuss-books.homepage-featured{
+	@include spacer(3);
+	.view-content{
+		@include spacer(1.5);
+		@include smallTab{
+			@include bleed(20px);
+			@include safeFlex(row,wrap,null,null);
+		}
+	}
+
+	.views-row{
+		width: 100%;
+		text-align: center;
+		@include smallTab{
+			width: 50%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	.views-field-field-cover-image{
+		@include spacer(.5);
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.views-field-title{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.views-field-author{
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	.view-footer{
+		text-align: center;
+	}
+}//end homepage featured
+
+
+/* BOOKS LANDING
+-------------------- */
+.seuss-books.books-landing{
+	max-width: 1000px;
+	@include auto;
+	@extend .seuss-books.homepage-featured;
+
+	.views-exposed-form{
+		position: relative;
+		padding-top: 2em;
+		padding-bottom: 1em;
+		&:after{
+			@include fullBack($orange);
+		}
+		.form-item-combine{
+			max-width: 350px;
+			.description{
+				font-size: 16px;
+			}
+		}
+		.form-item-field-category-target-id{
+			margin-right: 2em;
+		}
+
+		.form-actions{
+			display: inline-block;
+			vertical-align: top;
+			margin-top: 38px;
+		}
+	}//end views exposed form
+
+	.view-content{
+		@include smallTab{
+			@include bleed(40px);
+		}
+	}
+	.views-row{
+		@include smallTab{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@include tab{
+			width: 25%;
+		}
+	}
+}//end books landing
+
+
