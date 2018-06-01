@@ -7,6 +7,7 @@
 ------------------ */
 .path-site-search{
 
+
 	//prevent contextual links interference when logged in
 	.views-element-container{
 		position: static;
@@ -16,15 +17,72 @@
 		position: relative;
 	}
 
+	.block-search-form-block{
+		width: 100%;
+	}
+
+	#views-exposed-form-site-search-site-search{
+		@include spacer(2);
+		@include safeFlex(row,wrap,null,null);
+		@include translateX(0);
+		height: auto;
+		position: static;
+		max-width: 100%;
+		width: 100%;
+		padding: 0;
+		&:after{
+			content: none;
+		}
+		.form-item-search-api-fulltext{
+			@include safeFlexSize(0,1,280px);
+			margin-right: 1em;
+			padding: 0;
+			label{
+				display: none;
+			}
+			input{
+				font-size: 20px;
+			}
+		}
+		.form-actions input{
+			margin-bottom: 0;
+			padding: .5em 2.25em;
+			position: static;
+			background: $link;
+			width: 132px;
+			height: auto;
+			text-indent: 0;
+			&:hover,&:active,&:focus{
+				background: $hoverLink;
+				@include transAll(.3s);
+			}
+			@include tab{
+				padding: .72em 3em;
+				width: 145px;
+			}
+			&:not(#edit-reset){
+				margin-right: 10px;
+			}
+			&#edit-reset{
+				background: $black;
+				&:hover,&:focus,&:active{
+					background: $hoverLink;
+				}
+			}
+		}
+	}//end form
+
 	.layout-content{
-		padding: 2em 20px 0 !important; 
+		padding: 3em 20px 2em !important; 
 		.site-search{
+			@include safeFlex(row,wrap,null,null);
 			h1{
 				@include tab{
 					color: $black;
 				}
 			}
 			.block-search-form-block{
+				width: 100%;
 				text-align: left;
 				margin-bottom: 2em;
 				display: block;
@@ -34,65 +92,65 @@
 				}
 			}//end block search form
 
-			#views-exposed-form-site-search-site-search{
-				@include safeFlex(row,wrap,null,null);
-				@include translateX(0);
-				height: auto;
-				position: static;
-				max-width: 100%;
+			.view-header{
 				width: 100%;
-				.form-item-search-api-fulltext{
-					@include safeFlexSize(0,1,280px);
-					margin-right: 1em;
-					label{
-						display: none;
-					}
-					input{
-
-					}
+				h2{
+					margin-top: 1em;
+					padding-bottom: .5em;
+					border-bottom: 2px solid $green;
+					margin-bottom: 2.5em;
 				}
-				.form-actions input{
-					margin-bottom: 0;
-					padding: .5em 2.25em;
-					position: static;
-					background: $link;
-					width: 132px;
-					height: auto;
-					text-indent: 0;
-					&:hover,&:active,&:focus{
-						background: $hoverLink;
-						@include transAll(.3s);
-					}
-					@include tab{
-						padding: .72em 3em;
-						width: 145px;
-					}
-					&:not(#edit-reset){
-						margin-right: 10px;
-					}
-					&#edit-reset{
-						background: $black;
-						&:hover,&:focus,&:active{
-							background: $hoverLink;
-						}
-					}
-				}
-			}//end form
-
-			h2.results-header{
-				margin-top: 2em;
-				@include safeFlexSize(0,0,100%);
-				padding-bottom: .5em;
-				border-bottom: 1px solid $borderRule;
-				margin-bottom: .5em;
 			}
 			.view-content,.view-empty{
-				@include safeFlexSize(0,0,100%);
+				width: 100%;
 				margin-bottom: 3em;
 				& > span{
 					display: block;
 				}
 			}
+
+			.views-row{
+				position: relative;
+				&:not(:last-child){
+					padding-bottom: 1em;
+					&:after{
+						content: '';
+						display: block;
+						position: absolute;
+						bottom: 0;
+						left: 50%;
+						@include translateX(-50%);
+						height: 1px;
+						@include calc(width, "100% - 260px");
+						background: $borderRule;
+					}
+				}
+				@include clearFix;
+				.views-field-field-cover-image{
+					float: left;
+					max-width: 100px;
+				}
+				.views-field-title-1{
+					margin-left: 130px;
+					h4{
+						font-size: 17px;
+					}
+				}
+				.views-field-body{
+					margin-left: 130px;
+					p{
+						margin-bottom: .5em;
+					}
+				}
+			}
+
+			.view-footer{
+				@include pagerResults;
+			}
+			.bottom-pager{
+				@include pagerNumbers;
+			}
+
 		}//site-search
 	}//layout content
 
