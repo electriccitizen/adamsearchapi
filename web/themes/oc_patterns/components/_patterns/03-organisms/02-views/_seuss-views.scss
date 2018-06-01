@@ -8,7 +8,7 @@
 .seuss-books.homepage-featured{
 	@include spacer(3);
 	.view-content{
-		@include spacer(1.5);
+		@include spacer(1);
 		@include smallTab{
 			@include bleed(20px);
 			@include safeFlex(row,wrap,null,null);
@@ -26,7 +26,7 @@
 	}
 
 	.views-field-field-cover-image{
-		@include spacer(.5);
+		@include spacer(.75);
 		img{
 			display: block;
 			width: 100%;
@@ -36,6 +36,9 @@
 	.views-field-title{
 		padding-left: 10px;
 		padding-right: 10px;
+		h4{
+			@include spacer(.25);
+		}
 	}
 
 	.views-field-author{

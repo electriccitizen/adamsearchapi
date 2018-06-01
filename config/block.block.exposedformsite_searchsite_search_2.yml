@@ -1,4 +1,4 @@
-uuid: 297774d2-3e1b-467a-b7a7-aaaecc458243
+uuid: 69c59318-78b9-4a36-83a6-25d9ab0468f2
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ dependencies:
     - views
   theme:
     - oc_patterns
-id: exposedformsite_searchsite_search
+id: exposedformsite_searchsite_search_2
 theme: oc_patterns
-region: header
-weight: 0
+region: content
+weight: -1
 provider: null
 plugin: 'views_exposed_filter_block:site_search-site_search'
 settings:
@@ -25,5 +25,5 @@ visibility:
   request_path:
     id: request_path
     pages: /site-search
-    negate: true
+    negate: false
     context_mapping: {  }
