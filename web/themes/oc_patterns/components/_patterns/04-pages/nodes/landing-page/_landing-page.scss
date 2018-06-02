@@ -4,6 +4,9 @@
 
 .node--type-landing_page{
 	.block-region-top{
+		.block-entity-fieldnodetitle{
+			margin-top: 0;
+		}
 		.landing-header{
 			position: relative;
 			.field-banner{
@@ -34,6 +37,9 @@
 						}
 					}
 				}
+			}
+			&:not(.has-banner){
+				margin-top: 1em;
 			}
 		}//end landing header
 	}//end block-regoin-top
