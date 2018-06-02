@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Theme override of a views exposed form.
+ *
+ * Available variables:
+ * - form: A render element representing the form.
+ *
+ * @see template_preprocess_views_exposed_form()
+ */
+#}
+{{ attach_library('oc_patterns/views') }}
+{% if q is not empty %}
+  {#
+    This ensures that, if clean URLs are off, the 'q' is added first,
+    as a hidden form element, so that it shows up first in the POST URL.
+  #}
+{{ q }}
+{% endif %}
+
+
+<div class="exposed-widgets">
+
+	<div class="views-exposed-form-toggles">
+		<div class="keyword-wrapper">
+			{{ form.actions }}
+			{{ form.search_api_fulltext }}
+		</div>
+
+		<div class="custom-filters-outer">
+			<div class="custom-filter-wrapper">
+				<ul id="custom-filters">
+					<li class="custom-toggle categories"><a class="filter-toggle" role="button">Categories</a></li>
+					<li class="hidden-filter categories" aria-exposed="false">{{ form.field_category }}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	{# only show the query parameters if there is a query #}
+	{% if '?search' in url or '?=&' in url or '?=f' or '?f' in url %}
+		<div class="term-filters">
+			<div class="results">
+				<span><strong>Books filtered by:</strong></span>
+				<div class="exposed-terms">
+					{%- if form.search_api_fulltext['#value'] != '' -%}
+						<span>{{- form.search_api_fulltext['#value'] -}}</span>
+					{%- endif -%}
+				</div>
+			</div>
+			<a class="clear-filters" href="/books" role="button">Reset filters</a>
+		</div>
+	{% endif %}
+
+</div>

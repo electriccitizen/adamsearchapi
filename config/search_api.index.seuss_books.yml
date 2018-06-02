@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_book_author
     - field.storage.node.body
     - field.storage.node.field_category
+    - field.storage.node.field_book_author
+    - field.storage.node.field_first_name
+    - field.storage.node.field_last_name
     - search_api.server.content
   module:
     - node
@@ -21,16 +23,6 @@ field_settings:
     property_path: title
     type: text
     boost: !!float 5
-  title_1:
-    label: 'Book Author » Content » Title'
-    datasource_id: 'entity:node'
-    property_path: 'field_book_author:entity:title'
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_book_author
-      module:
-        - node
   body:
     label: Body
     datasource_id: 'entity:node'
@@ -47,6 +39,30 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_category
+  field_first_name:
+    label: 'Book Author » Content » First Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_book_author:entity:field_first_name'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_book_author
+        - field.storage.node.field_first_name
+      module:
+        - node
+  field_last_name:
+    label: 'Book Author » Content » Last Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_book_author:entity:field_last_name'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_book_author
+        - field.storage.node.field_last_name
+      module:
+        - node
 datasource_settings:
   'entity:node':
     bundles:
@@ -61,6 +77,8 @@ processor_settings:
     all_fields: false
     fields:
       - body
+      - field_first_name
+      - field_last_name
     exceptions:
       texan: texa
       mexican: mexic
@@ -75,6 +93,8 @@ processor_settings:
     all_fields: false
     fields:
       - body
+      - field_first_name
+      - field_last_name
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
@@ -85,9 +105,10 @@ processor_settings:
     all_fields: true
     fields:
       - title
-      - title_1
       - body
       - field_category
+      - field_first_name
+      - field_last_name
     weights:
       preprocess_index: -20
       preprocess_query: -20

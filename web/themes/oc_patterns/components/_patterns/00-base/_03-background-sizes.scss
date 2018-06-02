@@ -126,6 +126,15 @@ $backAnchor: 30px;
 	@include backgroundSize($columns * $backAnchor,$rows * $backAnchor);
 }
 
+$seussBookToggle: 26px;
+@mixin seussBookSubmit{
+	@include sprite-search-submit;
+	@include backgroundSize($columns * $seussBookToggle,$rows * $seussBookToggle);
+}
+@mixin seussBookSubmitHover{
+	@include sprite-search-submit-hover;
+	@include backgroundSize($columns * $seussBookToggle,$rows * $seussBookToggle);
+}
 
 
 /* PATTERN LAB ONLY

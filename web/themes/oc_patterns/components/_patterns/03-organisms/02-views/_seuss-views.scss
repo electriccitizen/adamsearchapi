@@ -119,3 +119,202 @@
 }//end books landing
 
 
+/* SEUESS BOOKS SEARCH
+-------------------- */
+.seuss-books-search.seuss-books-search{
+	max-width: 1000px;
+	@include auto;
+	@extend .seuss-books.homepage-featured;
+	@include safeFlex(row,wrap,null,null);
+
+	.views-exposed-form{
+		width: 100%;
+		position: relative;
+		padding-top: 2em;
+		padding-bottom: 1em;
+		&:after{
+			@include fullBack($orange);
+		}
+		.keyword-wrapper{
+			position: relative;
+			max-width: 350px;
+			display: inline-block;
+			vertical-align: top;
+			.form-submit{
+				position: absolute;
+				top: 8px;
+				right: 8px;
+				display: block;
+				text-indent: -300vw;
+				font-size: 0;
+				height: 26px;
+				width: 26px;
+				padding: 0;
+				margin-bottom: 0;
+				cursor: pointer;
+				@include buttonWipe;
+				@include seussBookSubmit;
+				&:hover,&:focus{
+					@include transClear;
+					@include seussBookSubmitHover;
+				}
+			}
+			.form-item-search-api-fulltext{
+				max-width: none;
+				width: 100%;
+				@include spacer(1);
+				@include tab{
+					@include spacer(.35);
+				}
+				input{
+					width: 100%;
+					font-size: 15px;
+					padding: 12px 32px 12px 8px;
+					font-family: $header;
+					@include spacer(.5);
+				}
+				.description{
+					padding-top: 0;
+					font-size: 15px;
+					@include spacer(1);
+				}
+			}
+		}//end keyword-wrapper
+
+		//custom filters & toggle
+		.custom-filters-outer{
+			position: relative;
+			position: relative;
+			clear: both;
+			@include spacer(1);
+			@include tab{
+				width: 100%;
+				@include calc(max-width, "100% - 400px");
+				display: inline-block;
+				vertical-align: top;
+				text-align: right;
+			}
+			.custom-filter-wrapper{
+				display: none;
+				padding-top: 20px;
+				@include tab{
+					display: block !important;
+					padding-top: 0;
+				}
+				#custom-filters{
+					@include listReset;
+					li{
+						width: 300px;
+						margin-left: 30px;
+						a{
+							display: block;
+							text-align: center;
+							background: $white;
+							padding: 7px 25px 6px;
+							font-family: $header;
+							font-weight: $heavy;
+							text-transform: uppercase;
+							border: 1px solid $borderRule;
+							cursor: pointer;
+						}
+						&.active a{
+							background: $red;
+							color: $white;
+							&:hover,&:focus{
+								background: $hoverLink;
+							}
+						}
+						&.hidden-filter{
+							display: none;
+							background: $transWhite;
+							padding: 10px 20px;
+							.js-form-type-checkbox{
+								margin-right: 0;
+								margin-bottom: .5em;
+								width: 100%;
+								text-align: left;
+								label{
+									&:hover,&:focus{
+										color: $hoverLink;
+										&:before{
+											border-color: $hoverLink;
+										}
+									}
+								}
+							}
+						}
+					}//end li
+				}//end custom filters
+			}//end custom filter wrapper
+		}//end custom-filters-outer
+
+		//selected terms
+		.term-filters{
+			font-family: $header;
+			strong{
+				margin-right: .5em;
+			}
+			.exposed-terms{
+				display: inline;
+				span{
+					margin-right: .5em;
+					font-family: $bodyFont;
+				}
+			}
+			.clear-filters{
+				display: block;
+				width: 135px;
+				text-align: center;
+				font-weight: $heavy;
+				margin-top: 10px;
+				font-size: 15px;
+				text-transform: uppercase;
+				padding: 6px 4px;
+				background: $red;
+				color: $white;
+				&:hover{
+					background: $hoverLink;
+				}
+			}
+		}//end term filters
+
+
+	}//end views exposed form
+
+	.view-content{
+		width: 100%;
+		@include smallTab{
+			@include bleed(40px);
+		}
+	}
+
+	.view-empty{
+		width: 100%;
+		max-width: $maxWidthText;
+		@include auto;
+		margin-top: 2em;
+		padding-bottom: 2em;
+		span{
+			display: block;
+		}
+	}
+
+	.views-row{
+		@include smallTab{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@include tab{
+			width: 25%;
+		}
+	}
+
+	.view-footer{
+		@include pagerResults;
+	}
+	.bottom-pager{
+		@include pagerNumbers;
+	}
+}//end books landing
+
+

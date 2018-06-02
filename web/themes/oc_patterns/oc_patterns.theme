@@ -57,6 +57,15 @@ function oc_patterns_preprocess_field(&$variables, $hook) {
   }
 }
 
+//find the url path for exposed filters (used for query detection)
+function oc_patterns_preprocess_views_exposed_form(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node){
+    $variables['url'] = $_SERVER['REQUEST_URI'];
+    $variables['#cache']['contexts'][] = 'url.path';
+  }
+}
+
 // Block suggestions for custom block bundles.
 function oc_patterns_theme_suggestions_block_alter(array &$suggestions, array $variables) {
   // Block suggestions for custom block bundles.

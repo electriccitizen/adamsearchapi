@@ -5,81 +5,66 @@ items:
     name: "Hamburger"
     value: "hamburger"
   2:
-    name: "Menu Desk Item Open"
-    value: "menu-desk-item-open"
-  3:
-    name: "Menu Desk Item Active"
-    value: "menu-desk-item-active"
-  4:
-    name: "Mobile Menu Item Open"
-    value: "menu-item-toggle-open"
-  5:
-    name: "Mobile Menu Item Active"
-    value: "menu-item-toggle-active"
-  6:
-    name: "Mobile Menu Item Close"
-    value: "menu-item-toggle-close"
-  7:
     name: "Accordion Shut"
     value: "accordion-shut"
-  8:
+  3:
     name: "Accordion Shut Red"
     value: "accordion-shut-red"
-  9:
+  4:
     name: "Accordion Shut Black"
     value: "accordion-shut-black"
-  10:
+  5:
     name: "Drop Arrow"
     value: "drop-arrow"
-  11:
+  6:
     name: "Drop Arrow Active"
     value: "drop-arrow-active"
-  12:
+  7:
     name: "Drop Arrow White"
     value: "drop-arrow-white"
-  13:
+  8:
     name: "Drop Arrow Active White"
     value: "drop-arrow-active-white"
-  14:
+  9:
     name: "Search Toggle"
     value: "search-toggle"
-  15:
+  10:
     name: "Search Submit"
     value: "search-submit"
-  16:
+  11:
     name: "Search Submit Hover"
     value: "search-submit-hover"
-  17:
+  12:
     name: "Close Cirle (hamburger & search)"
     value: "close-circle-punchout"
-  18:
+  13:
     name: "Drupal"
     value: "drupal"
-  19:
+  14:
     name: "Facebook"
     value: "facebook"
-  20:
+  15:
     name: "Twitter"
     value: "twitter"
-  21:
+  16:
     name: "LinkedIn"
     value: "linkedin"
-  22:
+  17:
     name: "YouTube"
     value: "youtube"
-  23:
+  18:
     name: "PDF"
     value: "file-pdf"
-  24:
+  19:
     name: "Word"
     value: "file-word"
-  25:
+  20:
     name: "Excel"
     value: "file-xls"
-  26:
+  21:
     name: "Powerpoint"
     value: "file-ppt"
-  27:
+  22:
     name: "Back To Top"
     value: "back-to-top"
   
