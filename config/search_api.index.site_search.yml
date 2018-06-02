@@ -4,18 +4,20 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_book_author
+    - field.storage.node.body
+    - field.storage.node.field_category
     - field.storage.node.field_oc_widgets
+    - field.storage.paragraph.field_section_title
+    - field.storage.paragraph.field_section_widgets
+    - field.storage.paragraph.field_widget_title
     - field.storage.paragraph.field_accordion_item
     - field.storage.paragraph.field_accordion_header
-    - field.storage.node.body
     - field.storage.paragraph.field_oc_long_text
-    - field.storage.paragraph.field_widget_title
-    - field.storage.node.field_category
     - search_api.server.content
   module:
     - node
-    - paragraphs
     - taxonomy
+    - paragraphs
     - search_api
 id: site_search
 name: 'Site Search'
@@ -39,20 +41,6 @@ field_settings:
     property_path: title
     type: text
     boost: !!float 21
-  field_accordion_header_1:
-    label: 'Widgets » Paragraph » Accordion » Paragraph » Accordion Header'
-    datasource_id: 'entity:node'
-    property_path: 'field_oc_widgets:entity:field_accordion_item:entity:field_accordion_header'
-    type: text
-    boost: !!float 3
-    dependencies:
-      config:
-        - field.storage.node.field_oc_widgets
-        - field.storage.paragraph.field_accordion_item
-        - field.storage.paragraph.field_accordion_header
-      module:
-        - paragraphs
-        - paragraphs
   body:
     label: Body
     datasource_id: 'entity:node'
@@ -61,31 +49,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.body
-  field_oc_long_text:
-    label: 'Widgets » Paragraph » Accordion » Paragraph » Accordion Content'
-    datasource_id: 'entity:node'
-    property_path: 'field_oc_widgets:entity:field_accordion_item:entity:field_oc_long_text'
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_oc_widgets
-        - field.storage.paragraph.field_accordion_item
-        - field.storage.paragraph.field_oc_long_text
-      module:
-        - paragraphs
-        - paragraphs
-  field_widget_title:
-    label: 'Widgets » Paragraph » Widget Title'
-    datasource_id: 'entity:node'
-    property_path: 'field_oc_widgets:entity:field_widget_title'
-    type: text
-    boost: !!float 8
-    dependencies:
-      config:
-        - field.storage.node.field_oc_widgets
-        - field.storage.paragraph.field_widget_title
-      module:
-        - paragraphs
   name:
     label: 'Categories » Taxonomy term » Name'
     datasource_id: 'entity:node'
@@ -97,6 +60,63 @@ field_settings:
         - field.storage.node.field_category
       module:
         - taxonomy
+  field_section_title:
+    label: 'Widgets » Paragraph » Section Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_oc_widgets:entity:field_section_title'
+    type: text
+    boost: !!float 5
+    dependencies:
+      config:
+        - field.storage.node.field_oc_widgets
+        - field.storage.paragraph.field_section_title
+      module:
+        - paragraphs
+  field_widget_title:
+    label: 'Widgets » Paragraph » Section Widgets » Paragraph » Widget Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_oc_widgets:entity:field_section_widgets:entity:field_widget_title'
+    type: text
+    boost: !!float 3
+    dependencies:
+      config:
+        - field.storage.node.field_oc_widgets
+        - field.storage.paragraph.field_section_widgets
+        - field.storage.paragraph.field_widget_title
+      module:
+        - paragraphs
+        - paragraphs
+  field_accordion_header:
+    label: 'Widgets » Paragraph » Section Widgets » Paragraph » Accordion » Paragraph » Accordion Header'
+    datasource_id: 'entity:node'
+    property_path: 'field_oc_widgets:entity:field_section_widgets:entity:field_accordion_item:entity:field_accordion_header'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_oc_widgets
+        - field.storage.paragraph.field_section_widgets
+        - field.storage.paragraph.field_accordion_item
+        - field.storage.paragraph.field_accordion_header
+      module:
+        - paragraphs
+        - paragraphs
+        - paragraphs
+  field_oc_long_text:
+    label: 'Widgets » Paragraph » Section Widgets » Paragraph » Accordion » Paragraph » Accordion Content'
+    datasource_id: 'entity:node'
+    property_path: 'field_oc_widgets:entity:field_section_widgets:entity:field_accordion_item:entity:field_oc_long_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_oc_widgets
+        - field.storage.paragraph.field_section_widgets
+        - field.storage.paragraph.field_accordion_item
+        - field.storage.paragraph.field_oc_long_text
+      module:
+        - paragraphs
+        - paragraphs
+        - paragraphs
 datasource_settings:
   'entity:node':
     bundles:
@@ -115,11 +135,12 @@ processor_settings:
     fields:
       - title
       - title_1
-      - field_accordion_header_1
       - body
-      - field_oc_long_text
-      - field_widget_title
       - name
+      - field_section_title
+      - field_widget_title
+      - field_accordion_header
+      - field_oc_long_text
     exceptions:
       texan: texa
       mexican: mexic
@@ -133,7 +154,6 @@ processor_settings:
   tokenizer:
     all_fields: false
     fields:
-      - field_accordion_header_1
       - body
       - field_oc_long_text
     spaces: ''
@@ -143,15 +163,16 @@ processor_settings:
       preprocess_index: -6
       preprocess_query: -6
   ignorecase:
-    all_fields: false
+    all_fields: true
     fields:
       - title
       - title_1
-      - field_accordion_header_1
       - body
-      - field_oc_long_text
-      - field_widget_title
       - name
+      - field_section_title
+      - field_widget_title
+      - field_accordion_header
+      - field_oc_long_text
     weights:
       preprocess_index: -20
       preprocess_query: -20
@@ -179,8 +200,6 @@ processor_settings:
       h3: 2
       strong: 2
       b: 2
-      em: 1
-      u: 1
     weights:
       preprocess_index: -15
       preprocess_query: -15
