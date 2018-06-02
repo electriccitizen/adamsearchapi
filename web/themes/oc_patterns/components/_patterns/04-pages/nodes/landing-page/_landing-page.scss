@@ -4,14 +4,38 @@
 
 .node--type-landing_page{
 	.block-region-top{
-		position: relative;
-		.field-banner{
-			opacity: 0;
-			@include animation('fadeIn 1.2s 1 forwards');
-			img{
-				width: 100%;
+		.landing-header{
+			position: relative;
+			.field-banner{
+				opacity: 0;
+				@include animation('fadeIn 1.2s 1 forwards');
+				@include spacer(1.5);
+				@include tab{
+					position: relative;
+					@include overlay;
+				}
+				img{
+					display: block;
+					width: 100%;
+				}
 			}
-		}
+			&.has-banner{
+				@include tab{
+					.field-node-title{
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						max-width: 1000px;
+						@include translate(-50%,-50%);
+						h1{
+							color: $white;
+							text-shadow: 2px 2px $transBlack;
+							@include spacer(0);
+						}
+					}
+				}
+			}
+		}//end landing header
 	}//end block-regoin-top
 
 

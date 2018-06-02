@@ -77,23 +77,6 @@ third_party_settings:
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 2546e9ea-3be3-42fd-87d4-63e2f45c4ef3
-          3e5151e7-9435-4b23-b51c-8bde259c5732:
-            id: 'entity_field:node:field_banner'
-            label: Banner
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: entity_reference_entity_view
-              settings:
-                view_mode: banner
-              third_party_settings: {  }
-              weight: 0
-            region: top
-            weight: -2
-            uuid: 3e5151e7-9435-4b23-b51c-8bde259c5732
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
           57f623a4-1857-4597-a36d-c8e21fb99311:
             id: system_breadcrumb_block
             label: Breadcrumbs
